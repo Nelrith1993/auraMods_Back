@@ -11,9 +11,10 @@ class Category extends Model
 
     protected $guarded = [];
 
-    public function gameVersions()
+    // Relación muchos a muchos con Subcategory
+    public function subcategories()
     {
-        return $this->belongsToMany(GameVersion::class);
+        return $this->belongsToMany(Subcategory::class);
     }
-
 }
+

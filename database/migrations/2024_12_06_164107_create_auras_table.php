@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('image_uri', 255)->nullable();
             $table->string('content_uri', 255);
             $table->unsignedBigInteger('subcategory_id');
+            $table->unsignedBigInteger('category_id');
             $table->timestamps();
             $table->foreign('subcategory_id')
                 ->references('id')->on('subcategories')
